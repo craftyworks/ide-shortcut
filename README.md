@@ -1,69 +1,93 @@
----
-title: "IDE 단축키"
-excerpt: "생산성 향상을 위한 IDE 단축키"
+# 🐵 IDE 단축키
 
-categories: 
-  - IT
-tag:
-  - Shortcut
-  - IDE
-  - IntellJ IDEA
-  - VS Code
-  - Eclipse
-  - Vim
-last-modified-at: 2020-01-27T22:12:00
----
+생산성 향상을 위한 IDE 단축키
 
-## VS Code
+* Visual Studio Code
+* IntelliJ IDEA
+* Android Studio
+* Vim
 
-Binding | Action
+## Visual Studio Code
+
+Action | Binding
 --- | ---
-Ctrl+Shift+K | Delete Line
-Alt+↑/↓ | Move line up/down`
-Alt+←/→ | Go back/forward
-Ctrl+` | Show/Hide Terminal
-Ctrl + F4 | Close Editor
-Ctrl + w | Close Window
+Delete Line | Ctrl + Shift + K | 
+Move line up/down | Alt + ↑/↓ | 
+Go back/forward | Alt + ←/→ | 
+Show/Hide Terminal | Ctrl + ` | 
+Close Editor | Ctrl + F4 | 
+Close Window | Ctrl + w | 
 
-> <https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf>
+> https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+
+### VSCodeVim
+
+settings.json
+
+```json
+    "vim.useSystemClipboard": true,
+    "vim.insertModeKeyBindings": [
+      {
+          "before": ["j", "j"],
+          "after": ["<Esc>"]
+      },
+      {
+          "before": ["k", "k"],
+          "after": ["<Esc>"]
+      }
+    ],
+```
+> https://github.com/VSCodeVim/Vim
 
 ## IntelliJ IDEA
 
 Action | Binding
 --- | ---
-Organize import | Ctrl + Alt + O
-Smart Code Completion | Ctrl + Shift + Space
-Search Everywhere | Double Shift
 Show Intention Actions and quick-fixes | Alt + Enter
-Recent files popup | Ctrl + E
+Smart Code Completion | Ctrl + Shift + Space
 Rename | Shift + F6
+Search Everywhere | Double Shift
 Toggle Maximizing editor | Ctrl + Shift + F12
+Recent files popup | Ctrl + E
 Move line up/down | Shift + Alt + ↑/↓  
-Settings | Ctrl + Alt + S
 Reformat Code | Ctrl + Alt + L
-Create Test | Ctrl + Shift + T
+Organize import | Ctrl + Alt + O
+Settings | Ctrl + Alt + S
 Go to Implementation | Ctrl + Alt + B
 Go to Declaration | Ctrl + B
 Next Highlited Error | F2
 Previous Highlited Error | Shift + F2
+Create Test | Ctrl + Shift + T
 Override Methods | Ctrl + O
-Quick Javadoc | Ctrl + Q
 Generate... | Alt + Insert
+Quick Javadoc | Ctrl + Q
 
-> <https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf>
+> https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf
 
-> <https://www.jetbrains.com/help/idea/mastering-keyboard-shortcuts.html>
+> https://www.jetbrains.com/help/idea/mastering-keyboard-shortcuts.html
 
+### .ideavimrc
+
+```
+set clipboard+=unnamed
+
+nnoremap <leader>rr :action Run<cr>
+nnoremap <leader>ss :action Android.SyncProject<cr>
+
+imap jj <ESC>
+imap kk <ESC>
+
+```
 ## Android Studio
 
-Binding | Action
+Action | Binding | 
 --- | ---
-Ctrl + Y | Delete Line
-Ctrl + F9 | Make Project
-Shift + F10 | Run
-Ctrl + F2 | Stop
+Delete Line | Ctrl + Y | 
+Make Project | Ctrl + F9 | 
+Run | Shift + F10 | 
+Stop | Ctrl + F2 | 
 
-> <https://developer.android.com/studio/intro/keyboard-shortcuts>
+> https://developer.android.com/studio/intro/keyboard-shortcuts
 
 ## Vim
 
@@ -78,31 +102,6 @@ Action | Bindng
 
 > 출처 : https://itisfun.tistory.com/281
 
-### .ideavimrc
-
-```
-# 시스템 클립보드 연동
-set clipboard+=unnamed
-
-# 사용자 정의 단축키
-nnoremap <leader>rr :action Run<cr>
-```
-* cmd 
-  * n+nore+map
-  * n : normal mode
-  * nore : non-recursive
-  * map
-* attr
-  * \<leader\> : \ (back slash)
-  * \<space\> : Space
-  * \<C-A\> : Ctrl + a
-  * \<tab> : Tab
-* lhs (left hand side)
-  * :action
-* rhs
-  * command 
-  * \<cr\> : Carriage Return
-
 ### ESC 키매핑 바꾸기
 
 VIM 을 사용하면 ESC 키를 겁나게 누르게 되어 있다.  그런데 지리적으로 키보드 좌측상단에 있다보니 왼쪽 약지 손가락을 쭉펴서 찾아가야 한다. 처음 VI 가 태어날 당시에는 키보드에서 ESC 키의 위치가 현재와 달리 지금의 Tab 키 자리 였다고 한다.
@@ -115,18 +114,6 @@ VIM 을 사용하면 ESC 키를 겁나게 누르게 되어 있다.  그런데 �
 ```
 :imap jj <ESC>
 :imap kk <ESC>
-```
-### VS Code
-
-settings.json
-
-```json
-    "vim.insertModeKeyBindings": [
-      {
-        "before": ["j", "j"],
-        "after": ["<Esc>"]
-      }
-    ]
 ```
 
 ### .vrapperrc
