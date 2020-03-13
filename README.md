@@ -61,6 +61,12 @@ Create Test | Ctrl + Shift + T
 Override Methods | Ctrl + O
 Generate... | Alt + Insert
 Quick Javadoc | Ctrl + Q
+Activate Project Window | Alt + 1
+Switch focus to editor | ESC
+🥝 Find Usages | Alt + F7
+Line Comment | Ctrl + /
+Block Comment | Ctrl + Shift + /
+Refactor this | Ctrl + Shift + Alt + T
 
 > https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf
 
