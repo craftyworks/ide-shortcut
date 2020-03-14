@@ -67,6 +67,7 @@ Switch focus to editor | ESC
 Line Comment | Ctrl + /
 Block Comment | Ctrl + Shift + /
 Refactor this | Ctrl + Shift + Alt + T
+Compare Files | Ctrl + D
 
 > https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf
 
@@ -101,6 +102,7 @@ Action | Bindng
 --- | ---
 현재 커서에서 줄 끝까지 삭제 | d$ 또는 D
 현재 커서에서 줄 끝까지 삭제하고 insert mode | c$ 또는 C
+명령어 모드에서 붙여넣기 | Ctrl + R 후 0..9
 
 ![](/assets/images/vim_shortcut.jpg)
 
